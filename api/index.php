@@ -1,2 +1,4 @@
-<?php 
-require __DIR__. '/../public/index.php';
+<?php
+
+// Forward ke index Laravel
+require __DIR__ . '/../public/index.php';
