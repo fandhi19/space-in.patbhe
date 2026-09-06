@@ -58,11 +58,13 @@ class PeminjamanBarChart extends ChartWidget
     protected function getMonthlyCounts($model, $months): array
     {
         $counts = [];
+
         foreach ($months as $month) {
-            $counts[] = $model::whereYear('created_at', $month->year)
-                ->whereMonth('created_at', $month->month)
+            $counts[] = $model::whereYear('tanggal_mulai', $month->year)
+                ->whereMonth('tanggal_mulai', $month->month)
                 ->count();
         }
+
         return $counts;
     }
 }
